@@ -1,1 +1,32 @@
-<p>school-list works!</p>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let school of data">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h3>Escola {{ school.school }}</h3>
+            </mat-panel-title>
+            <mat-panel-description>
+                <ul class="actions">
+                    <li>
+                        <a href="javascript:void(0);" title="Editar escola">
+                            <i class="material-icons">edit</i>
+                            <small>Editar</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="Excluir escola">
+                            <i class="material-icons">delete</i>
+                            <small>Excluir</small>
+                        </a>
+                    </li>
+                </ul>
+              </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="main-content">
+            <ul>
+                <li><strong>Endereço: </strong> {{ school.address }}</li>
+                <li><strong>Telefone: </strong> {{ school.telephone }}</li>
+            </ul>
+
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>

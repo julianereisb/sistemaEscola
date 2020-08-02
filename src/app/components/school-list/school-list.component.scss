@@ -1,0 +1,47 @@
+@import '../../../assets/scss/imports.scss';
+
+h3 {
+    margin: 0;
+}
+
+ul.actions {
+    @include noList;
+    display: flex;
+    li {
+        padding-right: 25px;
+        a {
+            display: flex;
+            align-items: center;
+            small {
+                color: $gray-500;
+                display: block;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
+.main-content {
+    ul {
+        @include noList;
+        display: flex;
+        li {
+            padding-right: 30px;
+        }
+    }
+}
+
+
+// sobrescrevo alguns estilos padrões do material angular 
+.mat-expansion-panel {
+    background: $gray-100;
+    &:nth-of-type(even) {
+        background: $gray-300 !important;
+    }
+}
+.mat-expansion-panel-header-description {
+    justify-content: flex-end;
+}
+.mat-expansion-panel-spacing {
+    margin: 0 !important;
+}
