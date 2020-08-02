@@ -1,1 +1,20 @@
-<p>classes-list works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Número da turma</th>
+            <th>Ano</th>
+            <th>Professor</th>
+            <th>Quantidade de alunos</th>
+            <th>Horário</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let class of classes">
+            <td>{{ class.number }}</td>
+            <td>{{ class.year }}</td>
+            <td>{{ class.teacher }}</td>
+            <td>{{ class.amount }}</td>
+            <td>{{ class.schedule }}</td>
+        </tr>
+    </tbody>
+</table>

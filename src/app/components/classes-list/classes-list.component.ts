@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-classes-list',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./classes-list.component.scss']
 })
 export class ClassesListComponent implements OnInit {
+  @Input() classes;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.classes);
   }
 
 }
